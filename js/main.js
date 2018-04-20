@@ -6,26 +6,20 @@ let isInteger,
     fbText;
 
 
-isInterger = false;
+isInteger = false;
 
-while(!isInterger) {
-//In order for the maxNumber to be ligit we need to know
-//1. It's an interger
-//2. It's over zero
-
-maxNumber = prompt('Enter a number over zero (must be an interger):', 20); 
+while(!isInteger) {
+maxNumber = prompt('Enter a number over zero (must be an integer):', 20); 
  maxNUmber = parseInt(maxNumber);
 if (Number.isSafeInteger(maxNumber) && maxNumber > 0 ) {
-        isInterger = true;
+        isInteger = true;
     }
 }
-// `fbResults` variable to an empty Array
+
 fbResults = [];
-// TODO: Create a `for` loop that will execute the `maxNumber` of times.
+
 for (let i=1; i <= maxnumber; i++) {
-// TODO: Create logic inside the `for` loop to calculate FizzBuzz.  This will
-// require the use of several conditional statements that use the `%` operator.
-// Store the results of this logic in an array called `fbResults`.
+
     if (i % 15 == 0) {
         fbResults.push('FizzBuzz');
     }
@@ -40,13 +34,12 @@ for (let i=1; i <= maxnumber; i++) {
     }
 }
 
-// TODO: In preparation for creating the output text for your FizzBuzz results,
-// initialize the `fbText` variable to an empty string.
-fbText = "";
+
+fbText = '';
 // TODO: Use a `for ... of` loop to concatenate the values from `fbResults`
 // into the variable `fbText`.
 for (let result of fbResults) {
-    fbText + result + "\n"; 
+    fbText = fbResult + "\n"; 
 }
 
 ///////////////////////////////////////////////////////////////////////
