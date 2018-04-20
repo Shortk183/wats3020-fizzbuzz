@@ -5,20 +5,21 @@ let isInteger,
     fbResults,
     fbText;
 
-
+// Control value for the "while" loop
 isInteger = false;
-
+// User must enter integer above zero
 while(!isInteger) {
 maxNumber = prompt('Enter a number over zero (must be an integer):', 20); 
- maxNUmber = parseInt(maxNumber);
+maxNumber = parseInt(maxNumber);
 if (Number.isSafeInteger(maxNumber) && maxNumber > 0 ) {
         isInteger = true;
     }
 }
-
+//fbResults must be set to an empty Array
 fbResults = [];
-
-for (let i=1; i <= maxnumber; i++) {
+//set "for" loop to execute the maxNumber
+// logic inside loop for fbResults set
+for (let i=1; i <= maxNumber; i++) {
 
     if (i % 15 == 0) {
         fbResults.push('FizzBuzz');
@@ -34,12 +35,12 @@ for (let i=1; i <= maxnumber; i++) {
     }
 }
 
-
+// Output text for FizzBuzz results
 fbText = '';
-// TODO: Use a `for ... of` loop to concatenate the values from `fbResults`
+//  Use a `for ... of` loop to concatenate the values from `fbResults`
 // into the variable `fbText`.
 for (let result of fbResults) {
-    fbText = fbResult + "\n"; 
+    fbText = fbResults + "\n"; 
 }
 
 ///////////////////////////////////////////////////////////////////////
